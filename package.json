@@ -1,0 +1,16 @@
+{
+  "name": "serverest-api-test",
+  "version": "1.0.0",
+  "description": "\"Testes API utilizando o serverest + cypress\"",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "./node_modules/.bin/cypress open"
+  },
+  "author": "\"Lay-RosaLauren\"",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.3.1",
+    "faker": "^5.5.3",
+    "joi": "^17.4.2"
+  }
+}

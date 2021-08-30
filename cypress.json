@@ -1,0 +1,6 @@
+{
+    "baseUrl": "https://serverest.dev/",
+    "video": false,
+    "testFiles": "**/*.spec*"
+
+}
