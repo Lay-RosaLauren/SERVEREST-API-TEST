@@ -12,9 +12,9 @@ describe('Post Carrinho', () => {
             GetProdutos.listar().should((resProdutos) => {
                 expect(resProdutos.status).to.be.eq(200),
                 
-                PostCarrinho.adicionar(resEntrar.body.authorization, resProdutos.body.resProdutos[3]).should((resProdutos) => {
-                    expect(resProdutos.status).to.eq(201),
-                    expect(resProdutos.body.message).to.eq("Cadastro realizado com sucesso"),
+                PostCarrinho.adicionar(resEntrar.body.authorization,resProdutos.body._id).then((resAdicionar) => {
+                    expect(resAdicionar.status).be.eq(400)
+                    
                     DeleteCarrinho.excluir(resEntrar.body.authorization).should((resDelete) => {
                         expect(resDelete.status).to.eq(200)
                     })
