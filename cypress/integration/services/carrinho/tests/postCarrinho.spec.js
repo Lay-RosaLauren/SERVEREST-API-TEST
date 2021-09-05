@@ -14,7 +14,9 @@ describe('Post Carrinho', () => {
                 
                 PostCarrinho.adicionar(resEntrar.body.authorization,resProdutos.body._id).then((resAdicionar) => {
                     expect(resAdicionar.status).be.eq(400)
-                    
+                    //PostCarrinho.adicionar(resEntrar.body.authorization,resProdutos.body._id).should((resCarrinho) => {
+                    expect(resCarrinho.status).be.eq(400)
+
                     DeleteCarrinho.excluir(resEntrar.body.authorization).should((resDelete) => {
                         expect(resDelete.status).to.eq(200)
                     })
